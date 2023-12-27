@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forget Password</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <form action="Login_succes.html">
+      \
+      <div class="flex-col flex h-screen">
+        <div class="my-12 p-10 flex-1">
+          <h2 class="text-sky-400 font-bold text-lg">Forget Password</h2>
+          <p class="text-gray-400">Enter your registered email below</p>
+
+          <div class="my-12">
+            <lable class="font-semibold mx-3 text-gray-500" for="input-email"
+              >Email</lable
+            ><br />
+            <input
+              class="border-2 p-2 rounded-lg w-full mb-3"
+              type="text"
+              id="input-email"
+              placeholder="siberianwhisky@gmail.com"
+            />
+            <p class="text-gray-400 mx-3">
+              Remember the password?
+              <a href="Login_loginUser.html" class="font-semibold text-sky-400"
+                >Sign in</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center text-center mb-10">
+          <button
+            type="submit"
+            class="w-4/5 m-3 p-3 rounded-xl bg-[#66d2e8] hover:bg-[#39bad4] font-bold text-md text-white shadow-sm"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

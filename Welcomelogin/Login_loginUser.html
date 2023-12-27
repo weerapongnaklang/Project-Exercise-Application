@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loginUser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link src="Login_createUser.html" rel="" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-theme-right h-screen">
+      <div class="justify-center flex">
+        <img src="image welcome/Logo.png" />
+      </div>
+      <div class="text-center text-blue-950">
+        <h1 class="font-semibold text-2xl mb-5">Welcome</h1>
+        <p class="text-sm font-thin">Embark On Your Fitness Journey</p>
+        <p class="text-sm font-thin">With Our Track Excercise App!</p>
+        <p class="text-sm font-thin">Join Now And Let's Get Moving Together.</p>
+        <div class="mt-12">
+          <a
+            onclick="showBottomSheet()"
+            href="#"
+            class="w-4/5 block m-auto p-3 rounded-xl bg-[#66d2e8] font-bold text-md text-white"
+          >
+            Login
+          </a>
+        </div>
+        <div class="mt-2">
+          <a
+            href="#"
+            class="w-4/5 rounded-xl m-auto block p-3 bg-gray-300 font-semibold text-md text-blue-950"
+          >
+            Get Start
+          </a>
+        </div>
+        <div class="mt-10 mx-10 text-xs">
+          <p>
+            By Logging In Or Registering. You Have Agreed To
+            <a href="#" onclick="showModal('modal-terms')" class="text-red-600"
+              >The Terms And Conditions</a
+            >
+            And
+            <a href="#" onclick="showModal('modal-policy')" class="text-red-600"
+              >Privacy Policy</a
+            >
+          </p>
+        </div>
+      </div>
+      <div>
+        <div
+          onclick="hideBottomSheet()"
+          class="bottom-sheet absolute w-full h-full top-0 bg-gray-600 opacity-50"
+        ></div>
+        <div
+          id="bottom-sheet"
+          class="bottom-sheet absolute w-full h-3/4 bottom-0 bg-white p-8 rounded-tr-lg rounded-tl-lg"
+        >
+          <!-- Start Content -->
+
+          <div class="flex justify-evenly my-8 text-gray-400 font-semibold">
+            <div class="nav-login">
+              <a
+                href="#"
+                onclick="showCreate()"
+                class="hover:text-sky-400 active:text-sky-400"
+                >Create Account</a
+              >
+            </div>
+            <div>
+              <a href="#" onclick="hideCreate()" class="hover:text-sky-400"
+                >Login</a
+              >
+            </div>
+          </div>
+
+          <div class="create-account mx-8">
+            <div class="input-login">
+              <label class="font-semibold mx-3" for="input-name"
+                >Full name</label
+              ><br />
+              <input
+                class="border-2 p-2 rounded-lg w-full mb-3"
+                type="text"
+                id="input-name"
+                placeholder="Jonathan Whiskey"
+              />
+              <label class="font-semibold mx-3" for="input-email"
+                >Email address</label
+              ><br />
+              <input
+                class="border-2 p-2 rounded-lg w-full mb-3"
+                type="email"
+                id="input-email"
+                placeholder="siberianwhisky@gmail.com"
+              /><br />
+              <label class="font-semibold mx-3" for="input-password"
+                >Password</label
+              ><br />
+              <input
+                class="border-2 p-2 rounded-lg w-full"
+                type="password"
+                id="input-password"
+                placeholder="************"
+              /><br />
+              <div class="flex justify-center my-5">
+                <button
+                  href=""
+                  type="submit"
+                  class="w-4/5 m-3 p-3 rounded-xl bg-[#66d2e8] font-bold text-md font-inter text-white shadow-sm"
+                >
+                  Registered
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="login mx-8 flex-1">
+            <form>
+              <div class="input-login">
+                <label class="font-semibold mx-3" for="login-email"
+                  >Email address</label
+                ><br />
+                <input
+                  class="border-2 p-2 rounded-lg w-full mb-3"
+                  type="text"
+                  id="login-email"
+                  placeholder="siberianwhisky@gmail.com"
+                /><br />
+                <label class="font-semibold mx-3" for="login-password"
+                  >Password</label
+                ><br />
+                <input
+                  class="border-2 p-2 rounded-lg w-full"
+                  type="password"
+                  id="login-password"
+                  placeholder="************"
+                /><br />
+                <a
+                  href="Login_forgetPass.html"
+                  class="forget-password text-sky-400 font-semibold flex justify-end mt-3"
+                  >Forget Password?</a
+                ><br />
+                <div class="justify-center">
+                  <button
+                    type="submit"
+                    class="w-full p-3 rounded-xl bg-[#66d2e8] hover:bg-[#39bad4] font-bold text-md font-inter text-white shadow-sm"
+                  >
+                    Login
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- End Content -->
+        </div>
+      </div>
+    </div>
+    <!-- START Terms and Condition modal -->
+    <div
+      id="modal-terms"
+      class="relative z-10 hidden"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+      ></div>
+
+      <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div
+          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+        >
+          <div
+            class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+          >
+            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+              <div class="sm:flex sm:items-start">
+                <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                  <h3
+                    class="text-base font-semibold leading-6 text-gray-900"
+                    id="modal-title"
+                  >
+                    Terms And Conditions
+                  </h3>
+                  <div class="mt-2">
+                    <p class="text-sm text-gray-500">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
+            >
+              <button
+                onclick="closeModal('modal-terms')"
+                type="button"
+                class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Terms and Condition modal -->
+
+    <!-- START Privacy Policy modal -->
+    <div
+      id="modal-policy"
+      class="relative z-10 hidden"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+      ></div>
+
+      <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div
+          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+        >
+          <div
+            class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg"
+          >
+            <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+              <div class="sm:flex sm:items-start">
+                <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                  <h3
+                    class="text-base font-semibold leading-6 text-gray-900"
+                    id="modal-title"
+                  >
+                    Privacy Policy
+                  </h3>
+                  <div class="mt-2">
+                    <p class="text-sm text-gray-500">
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                      enim ipsam voluptatem quia voluptas sit aspernatur aut
+                      odit aut fugit, sed quia consequuntur magni dolores eos
+                      qui ratione voluptatem sequi nesciunt. Neque porro
+                      quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci velit, sed quia non numquam eius
+                      modi tempora incidunt ut labore et dolore magnam aliquam
+                      quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                      exercitationem ullam corporis suscipit laboriosam, nisi ut
+                      aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                      reprehenderit qui in ea voluptate velit esse quam nihil
+                      molestiae consequatur, vel illum qui dolorem eum fugiat
+                      quo voluptas nulla pariatur?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
+            >
+              <button
+                onclick="closeModal('modal-policy')"
+                type="button"
+                class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Privacy Policy modal -->
+
+    <script type="text/javascript">
+      const showBottomSheet = () => {
+        document.querySelectorAll(".bottom-sheet").forEach((element) => {
+          element.style.display = "block";
+        });
+      };
+      const hideBottomSheet = () => {
+        document.querySelectorAll(".bottom-sheet").forEach((element) => {
+          element.style.display = "none";
+        });
+      };
+      const showCreate = () => {
+        document.querySelectorAll(".create-account").forEach((element) => {
+          element.style.display = "block";
+          document.querySelectorAll(".login").forEach((element) => {
+            element.style.display = "none";
+          });
+        });
+      };
+      const hideCreate = () => {
+        document.querySelectorAll(".create-account").forEach((element) => {
+          element.style.display = "none";
+          document.querySelectorAll(".login").forEach((element) => {
+            element.style.display = "block";
+          });
+        });
+      };
+      const showModal = (modalId) => {
+        document.getElementById(modalId).classList.remove("hidden");
+      };
+      const closeModal = (modalId) => {
+        document.getElementById(modalId).classList.add("hidden");
+      };
+    </script>
+  </body>
+</html>

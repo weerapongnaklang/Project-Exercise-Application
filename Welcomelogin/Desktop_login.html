@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DesktopWelcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex">
+      <!-- LEFT -->
+      <div class="hidden md:block flex-1 h-screen w-full md:w-1/2 bg-theme md:bg-[#66d2e8]">
+        <div class="justify-center align-middle flex p-10 my-10">
+          <img src="image welcome/doggold.png" />
+        </div>
+        <div class="text-center text-5xl text-white font-extrabold">
+          <h1>DOG GO</h1>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+        <div class="flex-1 h-screen w-100 max-md:bg-none md:bg-cover bg-theme-right">
+        <div class="flex flex-col h-screen">
+            <div class="my-5 md:my-auto">
+              <div
+                class="head-login flex justify-evenly my-8 text-gray-400 font-semibold md:hidden"
+              >
+                <div class="nav-login">
+                  <a href="Desktop_createAcc.html" class="hover:text-sky-400"
+                    >Create Account</a
+                  >
+                </div>
+                <div>
+                  <a href="Desktop_login.html" class="text-sky-400">Login</a>
+                </div>
+              </div>
+
+              <div class="text-center text-blue-950 hidden md:block">
+                <h1 class="font-semibold text-2xl mb-5">Welcome</h1>
+                <p class="text-sm font-thin">Embark On Your Fitness Journey</p>
+                <p class="text-sm font-thin">With Our Track Excercise App!</p>
+                <p class="text-sm font-thin">
+                  Join Now And Let's Get Moving Together.
+                </p>
+              </div>
+              <form>
+                <div class="m-auto flex-1 w-4/5 mt-10">
+                  <label class="font-semibold mx-3" for="input-email"
+                    >Email address </label
+                  ><br />
+                  <input
+                    class="border-2 p-2 rounded-lg w-full mb-3"
+                    type="email"
+                    id="input-email"
+                    placeholder="siberianwhisky@gmail.com"
+                    required
+                  /><br />
+                  <label class="font-semibold mx-3" for="input-password"
+                    >Password</label
+                  ><br />
+                  <input
+                    class="border-2 p-2 rounded-lg w-full"
+                    type="password"
+                    id="input-password"
+                    placeholder="************"
+                    required
+                  /><br />
+                  <a
+                    href="Desktop_forgetPass.html"
+                    class="forget-password text-sky-400 hover:text-[#4ccee8] font-semibold flex justify-end mt-3"
+                    >Forget Password?</a
+                  ><br />
+                </div>
+                <div class="pt-10">
+                  <div>
+                    <button
+                      type="submit"
+                      class="w-4/5 block m-auto p-3 rounded-xl   hover:bg-[#39bad4] bg-[#66d2e8] font-bold text-md font-inter text-white text-center"
+                    >
+                      Login
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div
+                class="hidden md:block mt-10 mx-10 text-sm text-blue-950 text-center"
+              >
+                <p>
+                  Not a registered user yet?
+                  <a href="Desktop_createAcc.html" class="font-semibold"
+                    >Sign up now!</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

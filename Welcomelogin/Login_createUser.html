@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loginUser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link src="Login_createUser.html" rel="" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="min-h-screen mx-0 w-screen">
+      <div class="min-h-screen w-full mx-auto relative">
+        <div class="welcome-image justify-center flex">
+          <img src="/image welcome/Logo.png" />
+        </div>
+
+        <div
+          class="bottom-sheet absolute w-full h-full top-0 bg-gray-600 opacity-50"
+        ></div>
+        <div
+          class="bottom-sheet absolute w-full h-3/4 bottom-0 bg-white p-8 rounded-tr-lg rounded-tl-lg"
+        >
+          <!-- Start Content -->
+
+          <div
+            class="head-login flex justify-evenly my-8 text-gray-400 font-semibold"
+          >
+            <div class="nav-login">
+              <a href="Login_createUser.html" class="hover:text-sky-400"
+                >Create Account</a
+              >
+            </div>
+            <div>
+              <a href="Login_loginUser.html" class="hover:text-sky-400"
+                >Login</a
+              >
+            </div>
+          </div>
+
+          <div class="mx-8">
+            <div class="input-login">
+              <lable class="font-semibold mx-3" for="input-email"
+                >Full name</lable
+              ><br />
+              <input
+                class="border-2 p-2 rounded-lg w-full mb-3"
+                type="text"
+                name="input-email"
+                placeholder="Jonathan Whiskey"
+              />
+              <lable class="font-semibold mx-3" for="input-email"
+                >Email address</lable
+              ><br />
+              <input
+                class="border-2 p-2 rounded-lg w-full mb-3"
+                type="text"
+                name="input-email"
+                placeholder="siberianwhisky@gmail.com"
+              /><br />
+              <lable class="font-semibold mx-3" for="input-password"
+                >Password</lable
+              ><br />
+              <input
+                class="border-2 p-2 rounded-lg w-full"
+                type="text"
+                name="input-password"
+                placeholder="************"
+              /><br />
+              <div class="flex justify-center my-5">
+                <button
+                  href=""
+                  type="submit"
+                  class="w-4/5 m-3 p-3 rounded-xl bg-[#66d2e8] font-bold text-md font-inter text-white shadow-sm"
+                >
+                  Registered
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- End Content -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

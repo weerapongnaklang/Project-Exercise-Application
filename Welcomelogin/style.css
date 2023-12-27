@@ -1,0 +1,40 @@
+html, body {
+  min-height: 100%;
+}
+
+.bg-theme {
+  background-image: url('image welcome/bg-theme.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.bg-theme-right {
+  background-image: url('image welcome/bg-theme.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+@media screen and (min-width: 768px) {
+  .bg-theme {
+    background-image: none;
+  }
+}
+
+.succes {
+  width: 50px;
+  height: 100%;
+}
+
+.fa-solid{
+  width: 100%;
+}
+
+.bottom-sheet{
+  display: none;
+}
+
+.create-account{
+  display: none;
+}
